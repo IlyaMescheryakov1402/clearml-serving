@@ -167,7 +167,7 @@ class ModelRequestProcessor(object):
             while self._update_lock_flag:
                 await asyncio.sleep(0.5+random())
             # retry to process
-            return await self.process_request(base_url=base_url, version=version, request_body=request_body)
+            return await self.process_request(base_url=base_url, version=version, request_body=request_body, url_type=url_type)
 
         try:
             # normalize url and version
