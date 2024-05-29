@@ -92,7 +92,7 @@ async def cuda_exception_handler(request, exc):
 
 
 router = APIRouter(
-    prefix="/serve",
+    prefix="/v1",
     tags=["models"],
     responses={404: {"description": "Model Serving Endpoint Not found"}},
     route_class=GzipRoute,  # mark-out to remove support for GZip content encoding
